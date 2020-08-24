@@ -2,7 +2,8 @@ def chng_img_siz_maintain_aspratio(img, dim=50):
     '''
     :param img : image to change
     :param dim : desired dimensions for the width and height of image
-    :return: new_img; new image with new dimension whilst maintaining aspect ratio of original image (via padding by (0, 0, 0) values)
+    :return: new_img; new image with new dimension whilst maintaining aspect ratio of original image 
+    (via padding by (0, 0, 0) values or by upsampling via open cv).
     '''
     cvimg = cv2.imread(img)
     width, height, channels = cvimg.shape
