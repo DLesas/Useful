@@ -1,4 +1,9 @@
 def chng_img_siz_maintain_aspratio(img, dim=50):
+    '''
+    :param img : image to change
+    :param dim : desired dimensions for the width and height of image
+    :return: new_img; new image with new dimension whilst maintaining aspect ratio of original image
+    '''
     cvimg = cv2.imread(img)
     width, height, channels = cvimg.shape
     if width >= height:
@@ -21,4 +26,5 @@ def chng_img_siz_maintain_aspratio(img, dim=50):
     special_width_pad = width_pad + extrawidthpad
     resized = cv2.resize(cvimg, (new_width, new_height), interpolation=cv2.INTER_LINEAR)
     new_img = cv2.copyMakeBorder(resized, special_height_pad , height_pad, special_width_pad, width_pad, cv2.BORDER_CONSTANT, None, (0, 0, 0))
+    
     return new_img
