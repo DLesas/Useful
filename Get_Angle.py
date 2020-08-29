@@ -1,4 +1,4 @@
-def angle_between(coords1, coords2, coords3):
+def get_angle(coords1, coords2, coords3):
     '''
     :param coords1: coords of point 1 in (x, y) format
     :param coords2: coords of point 2 in (x, y) format
