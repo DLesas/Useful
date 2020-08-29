@@ -1,4 +1,4 @@
-def chng_img_siz_maintain_aspratio(img, dim=50):
+def change_img_size_maintain_aspratio(img, dim=50):
     '''
     :param img : image to change
     :param dim : desired dimensions for the width and height of image
